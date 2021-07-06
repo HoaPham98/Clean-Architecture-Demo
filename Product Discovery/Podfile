@@ -1,0 +1,50 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+def rxswift
+  pod 'RxSwift'
+  pod 'RxCocoa'
+end
+
+def alamofire
+  pod 'Alamofire'
+  pod 'AlamofireURLCache5'
+end
+
+target 'Domain' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Domain
+  rxswift
+
+end
+
+target 'NetworkPlatform' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NetworkPlatform
+  rxswift
+  alamofire
+
+end
+
+target 'SearchPlatform' do
+  use_frameworks!
+  rxswift
+
+end
+
+target 'Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Example
+  rxswift
+  pod 'SnapKit'
+  pod 'Then'
+  pod 'Reusable'
+  pod 'Kingfisher'
+  pod 'MBProgressHUD'
+end
